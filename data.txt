@@ -1,1 +1,1 @@
-<button>Your vote accepted:</button>
+Your vote accepted:
