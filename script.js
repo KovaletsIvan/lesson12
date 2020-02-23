@@ -1,10 +1,12 @@
 function button() {
   let ajaxRequest = new XMLHttpRequest();
   ajaxRequest.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("vote").innerHTML = this.responseText;
+    if (ajaxRequest.readyState == 4 && ajaxRequest.status == 200) {
+      document.getElementById("vote").innerHTML = ajaxRequest.responseText;
     }
   };
-  ajaxRequest.open("GET", "ajax_info.txt", true);
+  ajaxRequest.open("GET", "/data.txt", true);
   ajaxRequest.send();
 }
+let vote = document.getElementById("vote");
+vote.addEventListener("click", button);
