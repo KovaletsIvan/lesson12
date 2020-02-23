@@ -1,0 +1,1 @@
+let ajaxRequest = new XMLHttpRequest();
